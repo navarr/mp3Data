@@ -43,14 +43,14 @@ class mp3DataTest extends PHPUnit_Framework_TestCase
     public function testGetGenre()
     {
         $this->assertCount(1, $this->mp3Data->getGenres());
-        $this->assertEquals("Other", $this->mp3Data->getGenre());
+        $this->assertEquals('Other', $this->mp3Data->getGenre());
     }
 
     public function testGetTrack()
     {
         $this->assertCount(1, $this->mp3Data->getTracks());
-        $this->assertEquals("2", $this->mp3Data->getTrack());
-        $this->assertEquals("7", $this->mp3Data->getTotalTracks());
+        $this->assertEquals('2', $this->mp3Data->getTrack());
+        $this->assertEquals('7', $this->mp3Data->getTotalTracks());
     }
 
     public function testGetComment()
@@ -95,6 +95,6 @@ class mp3DataTest extends PHPUnit_Framework_TestCase
      */
     public function testThrowsExceptionIfNoSuchFile()
     {
-        $mp3Data = new \Navarr\mp3Data("NoSuchFile.mp3");
+        $mp3Data = new \Navarr\mp3Data('NoSuchFile.mp3');
     }
 }
